@@ -13,17 +13,20 @@ Thank you for your interest in contributing to Tson! This document provides guid
 ### Setup
 
 1. Fork and clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/tson.git
 cd tson
 ```
 
 2. Install dependencies:
+
 ```bash
 bun install
 ```
 
 3. Run tests to verify setup:
+
 ```bash
 bun test
 ```
@@ -37,6 +40,7 @@ TBD
 ### Making Changes
 
 1. Create a feature branch:
+
 ```bash
 git checkout -b feature/your-feature-name
 ```
@@ -44,21 +48,25 @@ git checkout -b feature/your-feature-name
 2. Make your changes and add tests
 
 3. Run type checking:
+
 ```bash
 bun run typecheck
 ```
 
 4. Run tests:
+
 ```bash
 bun test
 ```
 
 5. Format code:
+
 ```bash
 bun run format
 ```
 
 6. Lint code:
+
 ```bash
 bun run lint
 ```
@@ -76,6 +84,7 @@ We follow [Conventional Commits](https://www.conventionalcommits.org/):
 - `chore:` - Maintenance tasks
 
 Examples:
+
 ```
 TBD
 ```
@@ -88,8 +97,9 @@ TBD
 - Place tests alongside source files
 
 Example test:
+
 ```typescript
-TBD
+TBD;
 ```
 
 ### Documentation
@@ -116,6 +126,7 @@ TBD
 - Max line length: 100 characters
 
 Run formatter before committing:
+
 ```bash
 bun run format
 ```
@@ -154,6 +165,7 @@ TBD
 ### Bug Reports
 
 Include:
+
 - Tson version
 - Runtime (Bun/Node version)
 - Code example reproducing the issue
@@ -163,6 +175,7 @@ Include:
 ### Feature Requests
 
 Include:
+
 - Use case description
 - Proposed API design
 - Alternative solutions considered

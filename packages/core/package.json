@@ -1,0 +1,37 @@
+{
+  "name": "@tson/core",
+  "version": "0.1.0",
+  "description": "Core JSON parser, stringifier, and custom serialization engine",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node --format esm && tsc --emitDeclarationOnly",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test src/**/*.test.ts"
+  },
+  "keywords": [
+    "json",
+    "parser",
+    "serialization",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "mitata": "^0.1.0",
+    "typescript": "^5.4.0"
+  }
+}

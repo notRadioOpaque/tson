@@ -1,0 +1,39 @@
+{
+  "name": "@tson/storage",
+  "version": "0.1.0",
+  "description": "Type-safe localStorage and sessionStorage wrappers with automatic serialization",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target browser --format esm && tsc --emitDeclarationOnly",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test src/**/*.test.ts"
+  },
+  "keywords": [
+    "localstorage",
+    "sessionstorage",
+    "typescript",
+    "type-safe"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@tson/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.4.0"
+  }
+}

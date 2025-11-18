@@ -8,22 +8,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
 - Initial project structure
 
-
 ### Changed
+
 - N/A
 
 ### Deprecated
+
 - N/A
 
 ### Removed
+
 - N/A
 
 ### Fixed
+
 - N/A
 
 ### Security
+
 - N/A
 
 ---
@@ -33,7 +38,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Initial release (coming soon)
 
 ### Planned Features
-
 
 ---
 
