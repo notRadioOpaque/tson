@@ -10,16 +10,38 @@
     "build": "bun run --filter '*' build",
     "test": "bun test",
     "lint": "eslint packages --ext .ts",
+    "lint:fix": "eslint packages --ext .ts --fix",
     "format": "prettier --write \"packages/**/*.ts\" \"docs/**/*.md\" \"*.md\"",
     "format:check": "prettier --check \"packages/**/*.ts\" \"docs/**/*.md\" \"*.md\"",
-    "typecheck": "bun run --filter '*' typecheck"
+    "typecheck": "bun run --filter '*' typecheck",
+    "prepare": "husky",
+    "yalc:publish": "bun run build && bun run yalc:publish:all",
+    "yalc:publish:all": "cd packages/core && yalc publish --push && cd ../storage && yalc publish --push && cd ../validation && yalc publish --push",
+    "yalc:push": "bun run build && cd packages/core && yalc push && cd ../storage && yalc push && cd ../validation && yalc push"
+  },
+  "lint-staged": {
+    "packages/**/*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "docs/**/*.md": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "@types/bun": "latest",
     "@typescript-eslint/eslint-plugin": "^8.47.0",
     "@typescript-eslint/parser": "^8.47.0",
     "eslint": "^9.39.1",
-    "prettier": "^3.6.2"
+    "globals": "^17.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.6.2",
+    "yalc": "^1.0.0-pre.53"
   },
   "peerDependencies": {
     "typescript": "^5.9.3"
