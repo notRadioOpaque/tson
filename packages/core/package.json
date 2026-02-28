@@ -19,7 +19,7 @@
   "scripts": {
     "build": "bun build src/index.ts --outdir dist --target node --format esm && tsc --emitDeclarationOnly",
     "typecheck": "tsc --noEmit",
-    "test": "bun test src/**/*.test.ts"
+    "test": "bun test tests/**/*.test.ts"
   },
   "keywords": [
     "json",
