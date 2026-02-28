@@ -5,15 +5,15 @@
 /**
  * Base class for Tson errors
  */
-export class TSonError extends Error {
+export class TsonError extends Error {
   constructor(message: string) {
     super(message);
     this.name = 'TsonError';
-    Object.setPrototypeOf(this, TSonError.prototype);
+    Object.setPrototypeOf(this, TsonError.prototype);
   }
 }
 
-export class TsonParseError extends TSonError {
+export class TsonParseError extends TsonError {
   public readonly line: number;
   public readonly column: number;
   public readonly position: number;
@@ -32,7 +32,7 @@ export class TsonParseError extends TSonError {
     Object.setPrototypeOf(this, TsonParseError.prototype);
   }
 
-  private static createSnippet(input: string, line: number, column: number) {
+  private static createSnippet(input: string, line: number, column: number): string {
     const lines = input.split('\n');
     const lineIndex = line - 1;
 

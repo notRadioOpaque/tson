@@ -65,13 +65,13 @@ export class Tokenizer {
       return this.scanNumber();
     }
 
-    this.error(`Unexpected character: '${char}'`);
+    return this.error(`Unexpected character: '${char}'`);
   }
 
   /**
    * Skip whitespaces
    */
-  private skipWhitespace() {
+  private skipWhitespace(): void {
     while (!this.isAtEnd()) {
       const char = this.peek();
       switch (char) {
@@ -105,7 +105,7 @@ export class Tokenizer {
   /**
    * Check if at end of input
    */
-  private isAtEnd() {
+  private isAtEnd(): boolean {
     return this.position >= this.input.length;
   }
 
